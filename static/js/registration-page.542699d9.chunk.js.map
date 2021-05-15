@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/Registarion.js"],"names":["Registarion"],"mappings":"iKAIeA,UAJK,WACjB,OAAO","file":"static/js/registration-page.542699d9.chunk.js","sourcesContent":["const Registarion = () => {\r\n   return <h1> это страница регитсрации</h1>;\r\n};\r\n\r\nexport default Registarion;\r\n"],"sourceRoot":""}
