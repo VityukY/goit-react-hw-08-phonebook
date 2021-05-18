@@ -6,9 +6,7 @@ class Login extends Component {
       email: '',
       password: '',
    };
-   componentDidMount() {
-      this.props.getCurrentUser();
-   }
+
    onChange = e => {
       this.setState({ [e.target.name]: e.target.value });
    };
@@ -35,16 +33,11 @@ class Login extends Component {
 
                <button type="submit">Login</button>
             </form>
-            <button type="button" onClick={() => this.props.logout()}>
-               Logout
-            </button>
          </>
       );
    }
 }
 const mapDispatchToProps = {
    signIn: operations.login,
-   logout: operations.logout,
-   getCurrentUser: operations.getCurrentUserUser,
 };
 export default connect(null, mapDispatchToProps)(Login);

@@ -11,11 +11,11 @@ import 'modern-normalize/modern-normalize.css';
 ReactDOM.render(
    <React.StrictMode>
       <Provider store={store.store}>
-         <PresistGare loading={null} presistor={store.persistor}>
+         <PersistGate loading={null} persistor={store.persistor}>
             <BrowserRouter>
                <App />
             </BrowserRouter>
-         </PresistGare>
+         </PersistGate>
       </Provider>
    </React.StrictMode>,
    document.getElementById('root'),

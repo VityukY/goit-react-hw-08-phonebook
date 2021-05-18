@@ -13,7 +13,7 @@ const user = createReducer(
    {
       [actions.registrationSucces]: (_, { payload }) => payload.user,
       [actions.loginSucces]: (_, { payload }) => payload.user,
-      [actions.getCurrentUserSucces]: (_, { payload }) => payload.user,
+      [actions.getCurrentUserSucces]: (_, { payload }) => payload,
       [actions.loginSucces]: () => initialState,
    },
 );
@@ -21,7 +21,7 @@ const user = createReducer(
 const token = createReducer('', {
    [actions.registrationSucces]: (_, { payload }) => payload.token,
    [actions.loginSucces]: (_, { payload }) => payload.token,
-   [actions.getCurrentUserSucces]: (_, { payload }) => payload.token,
+
    [actions.logoutSucces]: () => '',
 });
 

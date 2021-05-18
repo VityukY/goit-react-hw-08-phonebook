@@ -1,6 +1,7 @@
-import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import {
+   persistStore,
+   persistReducer,
    FLUSH,
    REHYDRATE,
    PAUSE,
@@ -13,7 +14,7 @@ import complexContactsReducer from './contacts/contact-reducer';
 import complexAuthReducer from './auth/auth-reducer';
 
 const persistConfig = {
-   key: 'token', //название хранителя
+   key: 'auth', //название хранителя
    storage,
    whitelist: ['token'],
 };
