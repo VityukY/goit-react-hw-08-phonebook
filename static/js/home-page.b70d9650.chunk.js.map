@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/Home.js"],"names":["Home"],"mappings":"iKAIeA,UAJF,WACV,OAAO","file":"static/js/home-page.b70d9650.chunk.js","sourcesContent":["const Home = () => {\r\n   return <h1> это домашняя страница</h1>;\r\n};\r\n\r\nexport default Home;\r\n"],"sourceRoot":""}
