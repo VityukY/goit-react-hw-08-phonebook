@@ -4,7 +4,7 @@ import routes from '../routs';
 const Navigation = () => {
    return (
       <nav className="linkList">
-         <NavLink exact to={routes.home} className="" activeClassName="">
+         <NavLink to={routes.home} className="" activeClassName="">
             Home
          </NavLink>
          <NavLink exact to={routes.contacts} className="" activeClassName="">

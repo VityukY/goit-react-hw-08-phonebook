@@ -1,3 +1,5 @@
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 import {
    FLUSH,
    REHYDRATE,
@@ -8,6 +10,13 @@ import {
 } from 'redux-persist';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import complexContactsReducer from './contacts/contact-reducer';
+import complexAuthReducer from './auth/auth-reducer';
+
+const persistConfig = {
+   key: 'token', //название хранителя
+   storage,
+   whitelist: ['token'],
+};
 
 const middleware = [
    ...getDefaultMiddleware({
@@ -17,11 +26,12 @@ const middleware = [
    }),
 ];
 
-const store = configureStore({
+export const store = configureStore({
    reducer: {
       phonebook: complexContactsReducer,
+      auth: persistReducer(persistConfig, complexAuthReducer),
    },
    middleware,
    devTools: process.env.NODE_ENV === 'development',
 });
-export default store;
+export const persistor = persistStore(store);
